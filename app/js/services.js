@@ -19,6 +19,16 @@ angular.module('Mahjong.services', [])
         }
     })
 
+    .factory('Layouts', function(){
+        var layouts = ["ox", "snake", "shanghai", "ram", "dragon", "rooster", "monkey"];
+
+        return {
+            all: function(){
+            return layouts;
+        }
+        }
+    })
+
     .factory('Games', ['$http', function($http){
 
         var games = [

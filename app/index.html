@@ -59,8 +59,8 @@
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                     <form name="addNewGame">
                         <label for="layout">Layout</label>
-                        <select id="layout" class="dropdown" ng-model="newGame.layout">
-                            <option ng-repeat="layout in layouts" value="{{layout}}">{{layout}}</option>
+                        <select id="layout" class="dropdown" ng-options="layout for layout in layouts" ng-model="newGame.layout">
+                            <!--<option ng-repeat="layout in layouts" value="{{layout}}">{{layout}}</option>-->
                         </select>
                         <br/>
                         <label for="minPlayers">Min players: {{newGame.minPlayers}}</label>

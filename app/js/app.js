@@ -9,7 +9,7 @@ require('./services.js');
 // Create your app
 var app = angular.module('Mahjong', ['Mahjong.services'])
 
-        .controller('MainCtrl', function($scope, Games, User){
+        .controller('MainCtrl', function($scope, Games, User, Layouts){
 
         $scope.games = Games.all();
 
@@ -19,7 +19,7 @@ var app = angular.module('Mahjong', ['Mahjong.services'])
 
         $scope.minPlayers = 1;
         $scope.maxPlayers = 35;
-        $scope.layouts = ["ox", "snake", "shanghai", "ram", "dragon", "rooster", "monkey"];
+        $scope.layouts = Layouts.all();
 
         $scope.addGame = function(newGame) {
             console.log("test test");
